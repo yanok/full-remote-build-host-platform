@@ -1,0 +1,11 @@
+build --config=bb
+build -c dbg
+
+build:remote --host_platform=//build/rules:remote-amd64
+build:remote --action_env=PATH=/bin:/usr/bin
+build:remote --platforms=//build/rules:remote-amd64
+build:remote --extra_execution_platforms=//build/rules:remote-amd64
+#build:remote --experimental_platform_in_output_dir
+build:bb --config=remote
+build:bb --remote_executor=grpc://172.29.0.221:8980
+build:bb --remote_instance_name=fuse
