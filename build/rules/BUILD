@@ -7,7 +7,7 @@ platform(
         "@platforms//os:linux",
     ],
     exec_properties = {
-        "container-image": "docker://389791687681.dkr.ecr.eu-west-1.amazonaws.com/wekanode-builder:e86494dc98a286d9_x86_64",
         "OSFamily": "linux",
+        "container-image": "docker://fra.ocir.io/fr3hx7l7h3p9/wekanode-builder:ba3fd4833464448a_x86_64",
     },
 )
